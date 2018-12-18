@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Clase20181013" x:Class="Clase20181013.MainPage">
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        
+        <Entry Placeholder="Escribe tu nombre">
+            <Entry.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                    <Setter Property="BackgroundColor" Value="red" />
+                </Trigger>
+            </Entry.Triggers>
+        </Entry>
+        
+        <Entry Placeholder="Escribe tu apellido" />
+        <Entry Placeholder="Escribe tu dirección" />
+         
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry">
+                <Style.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                        <Setter Property="BackgroundColor" Value="Red" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+        
+        <Entry x:Name="entryValidada" Text="" Placeholder="Escribe aqui" />
+        
+    </StackLayout>
+    
+    
+    
+
+
+</ContentPage>
